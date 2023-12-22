@@ -61,24 +61,20 @@ class Player {
     }
 
     public function addStoneToTable(Stone $stone) {
-        //print_r($stone);
         $this->table[] = $stone;
-        //print_r($this->table);
+    }
+
+    function endsWith(string $haystack, string $needle) {
+        $length = strlen($needle);
+        if (!$length) {
+            return true;
+        }
+            return substr($haystack, -$length) === $needle;
     }
 }
-
-function endsWith(string $haystack, string $needle) {
-    $length = strlen($needle);
-    if (!$length) {
-        return true;
-    }
-    return substr($haystack, -$length) === $needle;
-}
-
 
 class Stone {
     public string $Name;
-
     public function __construct(string $name) {
         $this->Name = $name;
     }
