@@ -1,7 +1,7 @@
 <?php
-namespace Grid;
-use Grid\Player;
-use Grid\Stone;
+namespace Igra;
+use Grid\User;
+use Grid\Kamyshki;
 class Game {
     private Player $playerUser;
     private Player $playerBot;
